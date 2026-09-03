@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="robots" content="noindex,nofollow"><title>For My Love ❤️</title>
+<meta name="robots" content="noindex,nofollow"><title>Happy Birthday Minal ❤️</title>
 <style>
 *{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:Georgia,"Times New Roman",serif}body{min-height:100vh;overflow-x:hidden;background:#160a13;color:#fff;display:flex;justify-content:center;align-items:center}
 body:before{content:"";position:fixed;inset:0;background:radial-gradient(circle at 50% 20%,#7d274f55,transparent 40%),radial-gradient(circle at 10% 90%,#b43f6d33,transparent 35%),linear-gradient(145deg,#120810,#2a0e1d 55%,#10070d);z-index:-2}.stars{position:fixed;inset:0;pointer-events:none;z-index:-1}.stars i{position:absolute;width:3px;height:3px;background:#fff;border-radius:50%;opacity:.65;animation:twinkle 2.5s infinite alternate}.stars i:nth-child(1){left:8%;top:20%}.stars i:nth-child(2){left:18%;top:72%;animation-delay:.8s}.stars i:nth-child(3){left:35%;top:12%;animation-delay:1.2s}.stars i:nth-child(4){left:67%;top:18%;animation-delay:.3s}.stars i:nth-child(5){left:83%;top:65%;animation-delay:1s}.stars i:nth-child(6){left:92%;top:30%;animation-delay:1.7s}
@@ -15,10 +15,10 @@ body:before{content:"";position:fixed;inset:0;background:radial-gradient(circle 
 <div class="stars"><i></i><i></i><i></i><i></i><i></i><i></i></div>
 <main class="card">
 <section id="welcome">
-<div class="heart">❤️</div><div class="eyebrow">A little something from my heart</div>
-<h1 class="title">For My <span>Love</span></h1>
-<p class="message">Happy Birthday to the person who makes ordinary moments feel special. Today, I just want you to know how happy I am that you are in my life. ❤️</p>
-<button class="btn" onclick="openSurprise()">There’s a surprise for you ✨</button>
+<div class="heart">❤️</div><div class="eyebrow">A little message from my heart</div>
+<h1 class="title">Happy Birthday, <span>Minal</span></h1>
+<p class="message"><strong>You are my special one. ❤️</strong><br><br>Minal, you are not just another person in my life — you hold a very beautiful and special place in my heart. I may not always have the perfect words to tell you how much you mean to me, but I hope you always know how special you are to me. 🫶<br><br>Your smile, your little things, and simply the person you are make my life a little more beautiful. On your special day, I wish you endless happiness, beautiful memories, and everything your heart wishes for. ✨<br><br><strong>Never forget — you are truly special to me. ❤️</strong></p>
+<button class="btn" onclick="openSurprise()">Open Your Surprise ✨</button>
 </section>
 <section id="surprise" class="hidden">
 <div class="heart">🎁</div><div class="eyebrow">Okay… one important question</div>
@@ -30,12 +30,12 @@ body:before{content:"";position:fixed;inset:0;background:radial-gradient(circle 
 <button class="choice" onclick="choose(this,'date')"><span class="icon">🥰</span>A Date With Me</button>
 </div>
 <div id="answer" class="answer"></div>
-<p class="note">Whatever you choose, I hope your birthday is as beautiful as your smile. ❤️</p>
+<p class="note">Made with code, a little magic, and a whole lot of love. ❤️</p>
 </section>
 </main>
 <script>
 function openSurprise(){document.getElementById('welcome').classList.add('hidden');document.getElementById('surprise').classList.remove('hidden');burst()}
-function choose(el,type){document.querySelectorAll('.choice').forEach(x=>x.classList.remove('selected'));el.classList.add('selected');const a={ring:'💍 Then a little sparkle for my favorite person. You deserve it. ❤️',teddy:'🧸 A teddy? Perfect. But I still think my hugs are better. 😉',date:'🥰 You chose the right answer. It’s a date — just you and me. ❤️'};document.getElementById('answer').textContent=a[type];burst()}
+function choose(el,type){document.querySelectorAll('.choice').forEach(x=>x.classList.remove('selected'));el.classList.add('selected');const a={ring:'💍 Then a little sparkle for my special person. You deserve it. ❤️',teddy:'🧸 A teddy? Perfect. But I still think my hugs are better. 😉',date:'🥰 You chose the right answer. It’s a date — just you and me. ❤️'};document.getElementById('answer').textContent=a[type];burst()}
 function burst(){for(let i=0;i<24;i++){const e=document.createElement('div');e.textContent=['❤️','💗','✨','♡'][i%4];e.style.cssText=`position:fixed;left:${Math.random()*100}vw;top:${55+Math.random()*20}vh;font-size:${14+Math.random()*24}px;z-index:9;pointer-events:none;animation:pop ${1+Math.random()}s ease-out forwards`;document.body.appendChild(e);setTimeout(()=>e.remove(),2200)}}
 </script>
 </body></html>
