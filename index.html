@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Happy Birthday ❤️</title>
+<style>
+*{box-sizing:border-box}body{margin:0;min-height:100vh;font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:radial-gradient(circle at 20% 10%,#ffd6e7,transparent 35%),radial-gradient(circle at 80% 90%,#d9d4ff,transparent 35%),linear-gradient(135deg,#fff7fb,#f5f2ff);color:#29233a;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.bg span{position:fixed;font-size:24px;opacity:.35;animation:float 8s linear infinite;pointer-events:none}.bg span:nth-child(1){left:8%;top:80%}.bg span:nth-child(2){left:25%;top:100%;animation-delay:2s}.bg span:nth-child(3){left:72%;top:90%;animation-delay:4s}.bg span:nth-child(4){left:90%;top:75%;animation-delay:1s}
+.card{width:min(92%,620px);padding:42px 30px;border:1px solid #ffffffaa;border-radius:30px;background:#ffffffc9;backdrop-filter:blur(18px);box-shadow:0 25px 80px #6d557522;text-align:center;position:relative;z-index:2}
+.heart{font-size:52px;animation:pulse 1.5s infinite}.eyebrow{letter-spacing:.18em;text-transform:uppercase;font-size:12px;color:#8a6680;font-weight:700}.title{font-size:clamp(40px,9vw,68px);line-height:1.02;margin:10px 0;background:linear-gradient(90deg,#9b4776,#6c57a5);-webkit-background-clip:text;color:transparent}.msg{font-size:18px;line-height:1.65;color:#62586d;max-width:500px;margin:0 auto 28px}.btn{border:0;border-radius:999px;padding:14px 25px;font-weight:800;font-size:15px;cursor:pointer;background:#30283d;color:white;box-shadow:0 12px 25px #30283d2e;transition:.2s}.btn:hover{transform:translateY(-2px)}.hidden{display:none}.question{font-size:28px;margin:4px 0 10px}.choices{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:25px}.choice{border:1px solid #eadfea;background:#fff;border-radius:22px;padding:22px 10px;cursor:pointer;transition:.25s;font-size:15px;font-weight:800;color:#3b3245}.choice:hover{transform:translateY(-5px);box-shadow:0 15px 30px #6d55751c}.icon{font-size:42px;display:block;margin-bottom:10px}.answer{margin-top:24px;padding:20px;border-radius:20px;background:#fff5fa;font-weight:700;color:#71475f;min-height:28px}.small{font-size:12px;color:#968b9b;margin-top:22px}
+@keyframes pulse{50%{transform:scale(1.12)}}@keyframes float{to{transform:translateY(-120vh) rotate(25deg);opacity:0}}
+@media(max-width:520px){.card{padding:32px 18px}.choices{grid-template-columns:1fr}.choice{padding:16px}.msg{font-size:16px}}
+</style>
+</head>
+<body>
+<div class="bg"><span>♡</span><span>✦</span><span>♡</span><span>✦</span></div>
+<main class="card">
+<section id="welcome">
+<div class="heart">🎂</div><div class="eyebrow">A little surprise for you</div>
+<h1 class="title">Happy Birthday! ❤️</h1>
+<p class="msg">Today is all about celebrating you. I hope your day is filled with smiles, happiness, and a few beautiful surprises.</p>
+<button class="btn" onclick="showChoices()">Open Your Surprise ✨</button>
+</section>
+<section id="choices" class="hidden">
+<div class="heart">🎁</div><div class="eyebrow">One important question</div>
+<h2 class="question">Which gift would you choose?</h2>
+<p class="msg">Choose carefully… your answer might have consequences. 😌</p>
+<div class="choices">
+<button class="choice" onclick="choose('ring')"><span class="icon">💍</span>Silver Ring</button>
+<button class="choice" onclick="choose('teddy')"><span class="icon">🧸</span>Cute Teddy</button>
+<button class="choice" onclick="choose('date')"><span class="icon">❤️</span>Date With Me</button>
+</div>
+<div id="answer" class="answer"></div>
+<p class="small">Made with a little bit of HTML, CSS, JavaScript & a lot of ❤️</p>
+</section>
+</main>
+<script>
+function showChoices(){document.getElementById('welcome').classList.add('hidden');document.getElementById('choices').classList.remove('hidden');}
+function choose(type){
+ const answers={
+ ring:"💍 Excellent choice! A little sparkle for someone special. ❤️",
+ teddy:"🧸 Approved! One extremely huggable teddy is coming your way. 😄",
+ date:"❤️ Ohhh… I was secretly hoping you'd choose this one. Date it is! 😉"
+ };
+ document.getElementById('answer').textContent=answers[type];
+ confetti();
+}
+function confetti(){
+ for(let i=0;i<18;i++){let e=document.createElement('span');e.textContent=['✨','💖','🎉','♡'][i%4];e.style.cssText=`position:fixed;left:${Math.random()*100}vw;top:50vh;font-size:${16+Math.random()*22}px;z-index:10;pointer-events:none;transition:transform 1.2s ease,opacity 1.2s ease`;document.body.appendChild(e);requestAnimationFrame(()=>{e.style.transform=`translate(${(Math.random()-.5)*300}px,${-150-Math.random()*350}px) rotate(${Math.random()*360}deg)`;e.style.opacity=0});setTimeout(()=>e.remove(),1300)}
+}
+</script>
+</body>
+</html>
